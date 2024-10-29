@@ -1,0 +1,199 @@
+/* Estilos básicos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Choose a font that matches your design */
+
+}
+
+/* Espaciado entre el título y los botones */
+.page h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Ajusta según el diseño */
+    color: #0044cc; /* Color acorde al diseño */
+    margin-bottom: 20px; /* Espaciado con los botones */
+    font-weight: bold;
+}
+
+/* Estilo del ícono en los títulos */
+.page h2 i {
+    color: #0044cc;
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    font-size: 28px; /* Tamaño del icono */
+}
+
+.page.active {
+    display: block;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #c22;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+}
+
+
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.home-button i {
+    margin-right: 5px;
+}
+
+/* Estilo 3D para los botones */
+.button {
+    display: block;
+    width: 100%;
+    background: #f0f0f0;
+    border: 2px solid #0044cc;
+    color: #0044cc;
+    padding: 15px;
+    margin: 15px 0; /* Aumenta el margen para más espacio entre botones */
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al hacer hover en los botones */
+.button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de "presión" al hacer clic en los botones */
+.button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icono y texto */
+.button img {
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.restaurant-option {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside each restaurant option */
+    margin: 10px 0; /* Margin between options */
+    background-color: #f9f9f9; /* Background color */
+    transition: box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.restaurant-option:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+.restaurant-image {
+    width: 100px; /* Adjust the size according to your design */
+    height: 75px; /* Adjust the size according to your design */
+    margin-right: 15px;
+    border-radius: 5px; /* Rounded corners for images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.restaurant-info {
+    flex-grow: 1;
+}
+
+.rating {
+    font-size: 1.2em; /* Adjust size according to your design */
+    color: gold; /* Color for the stars */
+}
+
+.transport-section {
+    margin-bottom: 20px; /* Espacio entre secciones */
+}
+
+.hotel-option, .pet-friendly-option, .historic-site {
+    margin-bottom: 20px; /* Espacio entre elementos */
+}
+
+.hotel-image {
+    width: 100px; /* Ajusta según tu diseño */
+    height: 75px; /* Ajusta según tu diseño */
+    margin-right: 15px;
+    border-radius: 5px; /* Bordes redondeados */
+    object-fit: cover; /* Mantiene el aspecto de la imagen */
+}
+
+.hotel-info {
+    display: flex;
+    flex-direction: column; /* Coloca el título y la descripción verticalmente */
+}
+
+.transport-map {
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Altura del iframe */
+    border: 1px solid #ddd; /* Bordes alrededor del mapa */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre el mapa y la descripción */
+}
+
+h3 {
+    margin: 0; /* Remove default margin for h3 */
+    color: #444; /* Color del subtítulo */
+}
+
+h2 {
+    color: #333; /* Color del título */
+    margin-top: 20px; /* Espacio encima del título */
+}
+
+p {
+    margin: 5px 0 0; /* Margin for paragraph */
+    font-size: 1em; /* Tamaño de la fuente de la descripción */
+    color: #666; /* Color del texto de la descripción */
+}
+
+.footer {
+    background-color: #c22;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+}

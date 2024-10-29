@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explora Córdoba</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button onclick="goBack()" class="home-button">
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-home"></i>
+            </button>
+            Explora Córdoba
+        </header>
+    
+        <!-- Página 1 -->
+        <div id="page1" class="page active">
+            <h2>Bienvenido a Córdoba</h2>
+            <div class="button" onclick="showPage(2)">Ver el Mapa</div>
+            <div class="button" onclick="showPage(3)">Gastronomía Local</div>
+            <div class="button" onclick="showPage(4)">Puntos Turísticos de Interés</div>
+            <div class="button" onclick="showPage(5)">Transporte Público</div>
+            <div class="button" onclick="showPage(6)">Puntos de Reciclaje</div>
+            <div class="button" onclick="showPage(7)">¿Qué Hacer?</div>
+        </div>
+    
+        <!-- Página 2 -->
+        <div id="page2" class="page">
+            <h2><i class="fas fa-map-marker-alt"></i> Ver el Mapa</h2>
+            <p>Mapa en tiempo real.</p>
+            <!-- Contenedor del Mapa de Google -->
+            <div id="map" style="width: 100%; height: 500px;"></div>
+        </div>
+    
+        <!-- Página 3 -->
+        <div id="page3" class="page">
+            <h2><i class="fas fa-utensils"></i> Gastronomía Local</h2>
+            <div class="button" onclick="showPage(31)">Comida Típica</div>
+            <div class="button" onclick="showPage(32)">Comida Gourmet</div>
+            <div class="button" onclick="showPage(33)">Comida Veggie</div>
+        </div>
+    
+        <!-- Página 31: Comida Típica -->
+        <div id="page31" class="page">
+            <h2>Comida Típica</h2>
+            <div class="restaurant-option">
+                <img src="https://example.com/image1.jpg" alt="Restaurante Típico 1" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Típico 1</h3>
+                    <div class="rating">⭐⭐⭐⭐☆</div>
+                    <p>Descripción breve del restaurante típico 1.</p>
+                </div>
+            </div>
+            <div class="restaurant-option">
+                <img src="https://example.com/image2.jpg" alt="Restaurante Típico 2" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Típico 2</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>Descripción breve del restaurante típico 2.</p>
+                </div>
+            </div>
+            <div class="restaurant-option">
+                <img src="https://example.com/image3.jpg" alt="Restaurante Típico 3" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Típico 3</h3>
+                    <div class="rating">⭐⭐⭐⭐☆</div>
+                    <p>Descripción breve del restaurante típico 3.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 32: Comida Gourmet -->
+        <div id="page32" class="page">
+            <h2>Comida Gourmet</h2>
+            <div class="restaurant-option">
+                <img src="ruta-a-la-imagen-4.jpg" alt="Restaurante Gourmet 1" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Gourmet 1</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>Descripción breve del restaurante gourmet 1.</p>
+                </div>
+            </div>
+            <div class="restaurant-option">
+                <img src="ruta-a-la-imagen-5.jpg" alt="Restaurante Gourmet 2" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Gourmet 2</h3>
+                    <div class="rating">⭐⭐⭐⭐☆</div>
+                    <p>Descripción breve del restaurante gourmet 2.</p>
+                </div>
+            </div>
+            <div class="restaurant-option">
+                <img src="ruta-a-la-imagen-6.jpg" alt="Restaurante Gourmet 3" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Gourmet 3</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>Descripción breve del restaurante gourmet 3.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 33: Comida Veggie -->
+        <div id="page33" class="page">
+            <h2>Comida Veggie</h2>
+            <div class="restaurant-option">
+                <img src="ruta-a-la-imagen-7.jpg" alt="Restaurante Veggie 1" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Veggie 1</h3>
+                    <div class="rating">⭐⭐⭐⭐☆</div>
+                    <p>Descripción breve del restaurante veggie 1.</p>
+                </div>
+            </div>
+            <div class="restaurant-option">
+                <img src="ruta-a-la-imagen-8.jpg" alt="Restaurante Veggie 2" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Veggie 2</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>Descripción breve del restaurante veggie 2.</p>
+                </div>
+            </div>
+            <div class="restaurant-option">
+                <img src="ruta-a-la-imagen-9.jpg" alt="Restaurante Veggie 3" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>Restaurante Veggie 3</h3>
+                    <div class="rating">⭐⭐⭐⭐☆</div>
+                    <p>Descripción breve del restaurante veggie 3.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Página 4 -->
+        <div id="page4" class="page">
+            <h2><i class="fas fa-landmark"></i> Puntos Turísticos de Interés</h2>
+            <div class="button" onclick="showPage(41)">Hoteles</div>
+            <div class="button" onclick="showPage(42)">Pet-Friendly</div>
+            <div class="button" onclick="showPage(43)">Sierras de Córdoba</div>
+            <div class="button" onclick="showPage(44)">Patrimonios Históricos</div>
+        </div>
+
+        <!-- Página 41: Hoteles -->
+        <div id="page41" class="page">
+            <h2>Hoteles</h2>
+            <div class="hotel-option">
+                <img src="https://example.com/hotel1.jpg" alt="Hotel 1" class="hotel-image">
+                <div class="hotel-info">
+                    <h3>Hotel Central</h3>
+                    <p>Un hotel de lujo en el corazón de Córdoba, ideal para viajeros de negocios y placer.</p>
+                </div>
+            </div>
+            <div class="hotel-option">
+                <img src="https://example.com/hotel2.jpg" alt="Hotel 2" class="hotel-image">
+                <div class="hotel-info">
+                    <h3>Hotel Boutique</h3>
+                    <p>Una experiencia única en un hotel boutique que combina confort y estilo.</p>
+                </div>
+            </div>
+            <div class="hotel-option">
+                <img src="https://example.com/hotel3.jpg" alt="Hotel 3" class="hotel-image">
+                <div class="hotel-info">
+                    <h3>Hostel Córdoba</h3>
+                    <p>Opción económica y amigable para jóvenes viajeros y mochileros.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 42: Pet-Friendly -->
+        <div id="page42" class="page">
+            <h2>Pet-Friendly</h2>
+            <div class="pet-friendly-option">
+                <h3>Hoteles Pet-Friendly</h3>
+                <p>Varios hoteles en Córdoba aceptan mascotas. Consulta con anticipación sobre las políticas específicas.</p>
+                <ul>
+                    <li>Hotel 1: Acepta mascotas con un cargo adicional.</li>
+                    <li>Hotel 2: Ofrece áreas específicas para pasear a las mascotas.</li>
+                    <li>Hostel 3: ¡Bienvenidos todos los animales de compañía!</li>
+                </ul>
+            </div>
+            <div class="pet-friendly-option">
+                <h3>Parques para Mascotas</h3>
+                <p>Córdoba cuenta con varios parques donde tus mascotas pueden jugar libremente.</p>
+            </div>
+        </div>
+
+        <!-- Página 43: Sierras de Córdoba -->
+        <div id="page43" class="page">
+            <h2>Sierras de Córdoba</h2>
+            <p>Las Sierras de Córdoba ofrecen paisajes impresionantes y actividades al aire libre como senderismo y paseos en bicicleta.</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.0451233482185!2d-64.27432768496564!3d-31.320634681219135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432b0ee1868b3e7%3A0x24f4c9811e4e95a5!2sSierras%20de%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1623778987314!5m2!1ses!2sar"
+                width="100%"
+                height="300"
+                frameborder="0"
+                style="border:0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+
+        <!-- Página 44: Patrimonios Históricos -->
+        <div id="page44" class="page">
+            <h2>Patrimonios Históricos</h2>
+            <p>Córdoba es rica en patrimonio histórico, con edificios y sitios que cuentan la historia de la ciudad.</p>
+            <div class="historic-site">
+                <h3>Manzana Jesuítica</h3>
+                <p>Un complejo de edificios que data del siglo XVII, considerado Patrimonio de la Humanidad por la UNESCO.</p>
+            </div>
+            <div class="historic-site">
+                <h3>Teatro Libertador San Martín</h3>
+                <p>Un hermoso teatro que alberga diversas actividades culturales y artísticas.</p>
+            </div>
+            <div class="historic-site">
+                <h3>Capilla del Rosario</h3>
+                <p>Un ejemplo de la arquitectura colonial que refleja la historia religiosa de Córdoba.</p>
+            </div>
+        </div>
+    
+        <!-- Página 5 -->
+        <div id="page5" class="page">
+            <h2><i class="fas fa-bus"></i> Transporte Público</h2>
+            <div class="button" onclick="showPage(51)">Bicicletas</div>
+            <div class="button" onclick="showPage(52)">Autobuses</div>
+            <div class="button" onclick="showPage(53)">Rutas</div>
+        </div>
+    
+        <!-- Página 51: Bicicletas -->
+        <div id="page51" class="page">
+            <h2>Bicicletas</h2>
+            <p>Información sobre el uso de bicicletas en Córdoba.</p>
+            <div class="transport-section">
+                <iframe
+                    src="https://turismo.cordoba.gob.ar/bici-cba-el-servicio-de-bicicletas-publicas-de-cordoba-capital/"
+                    class="transport-map"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+                <p>
+                    El servicio de bicicletas públicas de Córdoba Capital ofrece una forma
+                    ecológica y saludable de explorar la ciudad. Puedes alquilar una bicicleta
+                    en diversas estaciones distribuidas por la ciudad, facilitando el acceso a
+                    diferentes puntos de interés turístico.
+                </p>
+            </div>
+        </div>
+    
+        <!-- Página 52: Autobuses -->
+        <div id="page52" class="page">
+            <h2>Autobuses</h2>
+            <p>Detalles sobre el City Tour en Córdoba.</p>
+            <div class="transport-section">
+                <iframe
+                    src="https://turismo.cordoba.gob.ar/city-tour-en-bus-ingles/"
+                    class="transport-map"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+                <p>
+                    El City Tour en bus te permite recorrer los principales atractivos
+                    turísticos de Córdoba en un solo recorrido. Con paradas en lugares
+                    emblemáticos, es una excelente opción para conocer la ciudad de una manera
+                    cómoda y rápida.
+                </p>
+            </div>
+        </div>
+    
+        <!-- Página 53: Rutas -->
+        <div id="page53" class="page">
+            <h2>Rutas</h2>
+            <p>Información sobre rutas de transporte en Córdoba.</p>
+        </div>
+    
+        <!-- Página 6 -->
+        <div id="page6" class="page">
+            <h2><i class="fas fa-recycle"></i> Puntos de Reciclaje</h2>
+            <div class="button" onclick="showPage(61)">Puntos Cercanos</div>
+            <div class="button" onclick="showPage(62)">Información</div>
+            <div class="button" onclick="showPage(63)">Puntos de Reciclaje</div>
+        </div>
+    
+        <!-- Página 61: Puntos Cercanos -->
+        <div id="page61" class="page">
+            <h2>Puntos Cercanos</h2>
+            <p>Información sobre puntos de reciclaje cercanos.</p>
+        </div>
+    
+        <!-- Página 62: Información -->
+        <div id="page62" class="page">
+            <h2>Información</h2>
+            <p>Información general sobre reciclaje en Córdoba.</p>
+        </div>
+    
+        <!-- Página 63: Puntos de Reciclaje -->
+        <div id="page63" class="page">
+            <h2>Puntos de Reciclaje</h2>
+            <p>Detalles sobre los puntos de reciclaje en Córdoba.</p>
+        </div>
+    
+        <!-- Página 7 -->
+        <div id="page7" class="page">
+            <h2><i class="fas fa-hiking"></i> ¿Qué Hacer?</h2>
+            <div class="button" onclick="showPage(71)">Actividades del Mes</div>
+            <div class="button" onclick="showPage(72)">Recreativo</div>
+            <div class="button" onclick="showPage(73)">Museos</div>
+            <div class="button" onclick="showPage(74)">Espacios Verdes</div>
+        </div>
+    
+        <!-- Página 71: Actividades del Mes -->
+        <div id="page71" class="page">
+            <h2>Actividades del Mes</h2>
+            <p>Descripción de actividades del mes.</p>
+        </div>
+    
+        <!-- Página 72: Recreativo -->
+        <div id="page72" class="page">
+            <h2>Recreativo</h2>
+            <p>Actividades recreativas en Córdoba.</p>
+        </div>
+    
+        <!-- Página 73: Museos -->
+        <div id="page73" class="page">
+            <h2>Museos</h2>
+            <p>Información sobre los museos en Córdoba.</p>
+        </div>
+    
+        <!-- Página 74: Espacios Verdes -->
+        <div id="page74" class="page">
+            <h2>Espacios Verdes</h2>
+            <p>Explora los espacios verdes de Córdoba.</p>
+        </div>
+    
+        <!-- Página 8 -->
+        <div id="page8" class="page">
+            <h2>Actividades del Mes</h2>
+            <p>Visita los 5 puntos turísticos indicados y gana puntos para canjear.</p>
+        </div>
+    
+        <!-- Página 9 -->
+        <div id="page9" class="page">
+            <h2>¡Ganaste!</h2>
+            <p>Canjea estos cupones en el bar más cercano para un descuento del 15%.</p>
+        </div>
+    
+        <footer class="footer">
+            Más info en: cba.gov.ar
+        </footer>
+    </div>
+    
+    <script>
+        function showPage(pageNumber) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('page' + pageNumber).classList.add('active');
+        }
+    
+        function goBack() {
+            const activePage = document.querySelector('.page.active');
+            const activePageId = activePage.id;
+
+            // Verifica la longitud del ID y obtiene el carácter correspondiente
+            if (activePageId.length === 6) {
+                const pageToShow = activePageId.charAt(activePageId.length - 2); // Penúltimo carácter
+                showPage(pageToShow);
+            } else if (activePageId.length === 5) {
+                showPage(1);
+            }
+        }
+    </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6QkcmKnDdjwuQlwc72f2tuzZQZe4KR9c&callback=initMap" async defer></script>
+
+  <script>
+    function initMap() {
+      // Coordenadas aproximadas del centro de Córdoba
+      const cordobaCenter = { lat: -31.417, lng: -64.183 };
+
+      // Crear el mapa centrado en Córdoba
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: cordobaCenter,
+        zoom: 14,
+      });
+
+      // Lugares y sus coordenadas con hipervínculos
+      const lugares = [
+        { nombre: "Plaza San Martín", lat: -31.4167528, lng: -64.1835619, descripcion: "Plaza principal de la ciudad.", url: "https://www.google.com/maps/place/Plaza+San+Mart%C3%ADn/@-31.4170955,-64.1873909,18z" },
+        { nombre: "Mercado Norte", lat: -31.4264742, lng: -64.1825582, descripcion: "Mercado tradicional con productos locales.", url: "https://www.google.com/maps/place/Mercado+Norte/@-31.4260673,-64.1838767,18z" },
+        { nombre: "Iglesia del Carmen", lat: -31.4156474, lng: -64.1911089, descripcion: "Iglesia histórica.", url: "https://www.google.com/maps/place/Iglesia+del+Carmen/@-31.4155005,-64.1910371,18z" },
+        { nombre: "Palacio 6 de Julio", lat: -31.4170886, lng: -64.1831354, descripcion: "Sede del gobierno municipal.", url: "https://www.google.com/maps/place/Palacio+6+de+Julio/@-31.4169115,-64.1834354,18z" },
+        { nombre: "Paseo de las Artes", lat: -31.4185078, lng: -64.1882518, descripcion: "Espacio cultural y artístico.", url: "https://www.google.com/maps/place/Paseo+de+las+Artes/@-31.4179441,-64.1890619,18z" },
+        { nombre: "Manzana Jesuita", lat: -31.4155159, lng: -64.1859253, descripcion: "Patrimonio de la humanidad.", url: "https://www.google.com/maps/place/Manzana+Jesuita/@-31.4155777,-64.1860467,18z" },
+        { nombre: "Buen Pastor", lat: -31.4145572, lng: -64.1866883, descripcion: "Centro cultural y comercial.", url: "https://www.google.com/maps/place/Buen+Pastor/@-31.4139172,-64.1877331,18z" },
+        { nombre: "Parque de las Tejas", lat: -31.4145203, lng: -64.1838772, descripcion: "Parque popular con actividades recreativas.", url: "https://www.google.com/maps/place/Parque+de+las+Tejas/@-31.4144455,-64.1844641,18z" },
+        { nombre: "Ciudad Universitaria", lat: -31.4133768, lng: -64.1902155, descripcion: "Campus principal de la universidad.", url: "https://www.google.com/maps/place/Ciudad+Universitaria/@-31.4133418,-64.1907555,18z" },
+        { nombre: "Parque Sarmiento", lat: -31.4084455, lng: -64.1848911, descripcion: "El parque más grande de la ciudad.", url: "https://www.google.com/maps/place/Parque+Sarmiento/@-31.4086604,-64.1852982,18z" },
+        { nombre: "Terminal de Ómnibus", lat: -31.4332901, lng: -64.1887032, descripcion: "Estación de autobuses.", url: "https://www.google.com/maps/place/Terminal+de+Ómnibus/@-31.4332567,-64.1886467,18z" },
+        { nombre: "Templo Santísimo Sacramento", lat: -31.4102331, lng: -64.1855403, descripcion: "Iglesia moderna.", url: "https://www.google.com/maps/place/Templo+Sant%C3%ADsimo+Sacramento/@-31.4102854,-64.1856751,18z" }
+    ];
+
+      // Crear un infowindow
+      const infowindow = new google.maps.InfoWindow();
+
+      // Añadir marcadores para cada lugar
+      lugares.forEach(lugar => {
+        const marker = new google.maps.Marker({
+          position: { lat: lugar.lat, lng: lugar.lng },
+          map: map,
+          title: lugar.nombre
+        });
+
+        // Añadir evento para mostrar infowindow al hacer clic en el marcador
+        marker.addListener("click", () => {
+          infowindow.setContent(`
+            <h3>${lugar.nombre}</h3>
+            <p>${lugar.descripcion}</p>
+            <a href="${lugar.url}" target="_blank">Ver en Google Maps</a>
+          `);
+          infowindow.open(map, marker);
+        });
+      });
+
+      /*// Opcional: Añadir marcador en el centro de Córdoba
+      new google.maps.Marker({
+        position: cordobaCenter,
+        map: map,
+        title: "Centro de Córdoba"
+      });*/
+    }
+  </script>
+</body>
+</html>
+
