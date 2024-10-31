@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explora Córdoba</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
@@ -141,7 +141,7 @@
 
         <!-- Página 33: Comida Veggie -->
         <div id="page33" class="page">
-            <h2>Comida Veg</h2>
+            <h2>Comida Veggie</h2>
             
             <!-- Restaurante 1 -->
             <div class="restaurant-option">
@@ -198,44 +198,62 @@
         <!-- Página 41: Hoteles -->
         <div id="page41" class="page">
             <h2>Hoteles</h2>
+
             <div class="hotel-option">
-                <img src="https://example.com/hotel1.jpg" alt="Hotel 1" class="hotel-image">
+                <img src="assets/sheraton.png" alt="Hotel 1" class="hotel-image">
                 <div class="hotel-info">
-                    <h3>Hotel Central</h3>
-                    <p>Un hotel de lujo en el corazón de Córdoba, ideal para viajeros de negocios y placer.</p>
+                    <h3>Sheraton Córdoba Hotel</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="links-container">
+                        <a href="https://goo.gl/maps/SheratonCordoba" target="_blank"><i class="fas fa-map-marker-alt"></i> Ver en Maps</a>
+                        <a href="https://instagram.com/sheratoncordoba" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" target="_blank"><i class="fas fa-info-circle"></i> Información</a>
+                    </div>
                 </div>
             </div>
+
             <div class="hotel-option">
-                <img src="https://example.com/hotel2.jpg" alt="Hotel 2" class="hotel-image">
+                <img src="assets/nhhotel.png" alt="Hotel 2" class="hotel-image">
                 <div class="hotel-info">
-                    <h3>Hotel Boutique</h3>
-                    <p>Una experiencia única en un hotel boutique que combina confort y estilo.</p>
-                </div>
-            </div>
-            <div class="hotel-option">
-                <img src="https://example.com/hotel3.jpg" alt="Hotel 3" class="hotel-image">
-                <div class="hotel-info">
-                    <h3>Hostel Córdoba</h3>
-                    <p>Opción económica y amigable para jóvenes viajeros y mochileros.</p>
+                    <h3>NH Panorama</h3>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                    <div class="links-container">
+                        <a href="https://goo.gl/maps/NHPanorama" target="_blank"><i class="fas fa-map-marker-alt"></i> Ver en Maps</a>
+                        <a href="https://instagram.com/nhpanorama" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" target="_blank"><i class="fas fa-info-circle"></i> Información</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Página 42: Pet-Friendly -->
+        <!-- Página 42: Hoteles Pet-Friendly -->
         <div id="page42" class="page">
-            <h2>Pet-Friendly</h2>
-            <div class="pet-friendly-option">
-                <h3>Hoteles Pet-Friendly</h3>
-                <p>Varios hoteles en Córdoba aceptan mascotas. Consulta con anticipación sobre las políticas específicas.</p>
-                <ul>
-                    <li>Hotel 1: Acepta mascotas con un cargo adicional.</li>
-                    <li>Hotel 2: Ofrece áreas específicas para pasear a las mascotas.</li>
-                    <li>Hostel 3: ¡Bienvenidos todos los animales de compañía!</li>
-                </ul>
+            <h2>Hoteles Pet-Friendly</h2>
+
+            <div class="hotel-option">
+                <img src="assets/hotelcañada.jfif"Pet-Friendly Hotel 1" class="hotel-image">
+                <div class="hotel-info">
+                    <h3>Hotel de la Cañada</h3>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                    <div class="links-container">
+                        <a href="https://goo.gl/maps/HoteldelaCanada" target="_blank"><i class="fas fa-map-marker-alt"></i> Ver en Maps</a>
+                        <a href="https://instagram.com/hoteldelacanada" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" target="_blank"><i class="fas fa-info-circle"></i> Información</a>
+                    </div>
+                </div>
             </div>
-            <div class="pet-friendly-option">
-                <h3>Parques para Mascotas</h3>
-                <p>Córdoba cuenta con varios parques donde tus mascotas pueden jugar libremente.</p>
+
+            <div class="hotel-option">
+                <img src="assets/howardjohnson.png" alt="Pet-Friendly Hotel 2" class="hotel-image">
+                <div class="hotel-info">
+                    <h3>Howard Johnson Hotel & Suites</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="links-container">
+                        <a href="https://goo.gl/maps/HowardJohnson" target="_blank"><i class="fas fa-map-marker-alt"></i> Ver en Maps</a>
+                        <a href="https://instagram.com/howardjohnson" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" target="_blank"><i class="fas fa-info-circle"></i> Información</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -331,26 +349,46 @@
             <h2><i class="fas fa-recycle"></i> Puntos de Reciclaje</h2>
             <div class="button" onclick="showPage(61)">Puntos Cercanos</div>
             <div class="button" onclick="showPage(62)">Información</div>
-            <div class="button" onclick="showPage(63)">Puntos de Reciclaje</div>
         </div>
     
+        
         <!-- Página 61: Puntos Cercanos -->
         <div id="page61" class="page">
-            <h2>Puntos Cercanos</h2>
-            <p>Información sobre puntos de reciclaje cercanos.</p>
+            <h2>Puntos de Reciclaje Cercanos</h2>
+            <div class="recycle-point">
+                <h3>Centro de Reciclaje Norte</h3>
+                <p>Acepta plásticos, metales, y vidrio.</p>
+                <span class="info">Av. del Libertador 1234</span>
+            </div>
+            <div class="recycle-point">
+                <h3>Punto Verde Plaza Central</h3>
+                <p>Recibe residuos electrónicos y pilas.</p>
+                <span class="info">Plaza Central, entre las calles 8 y 9</span>
+            </div>
+            <div class="recycle-point">
+                <h3>Estación Eco Barrio Sur</h3>
+                <p>Acepta papel, cartón y aceites usados.</p>
+                <span class="info">Calle 12 de Octubre 456</span>
+            </div>
+            <div class="recycle-point">
+                <h3>Punto de Recolección de Textiles</h3>
+                <p>Recibe ropa usada y textiles en desuso.</p>
+                <span class="info">Mercado Norte, sector 3</span>
+            </div>
+            <div class="recycle-point">
+                <h3>Centro de Compostaje Comunitario</h3>
+                <p>Recolección de residuos orgánicos para compostaje.</p>
+                <span class="info">Parque Sarmiento</span>
+            </div>
         </div>
-    
-        <!-- Página 62: Información -->
+
+        <!-- Página 62: Información sobre el Reciclaje -->
         <div id="page62" class="page">
-            <h2>Información</h2>
-            <p>Información general sobre reciclaje en Córdoba.</p>
+            <h2>¿Por qué Reciclar?</h2>
+            <p>Reciclar ayuda a reducir la cantidad de residuos que llegan a los vertederos y permite dar nueva vida a los materiales.</p>
+            <p>Al reciclar correctamente, estás ayudando a conservar recursos y a reducir la contaminación.</p>
         </div>
     
-        <!-- Página 63: Puntos de Reciclaje -->
-        <div id="page63" class="page">
-            <h2>Puntos de Reciclaje</h2>
-            <p>Detalles sobre los puntos de reciclaje en Córdoba.</p>
-        </div>
     
         <!-- Página 7 -->
         <div id="page7" class="page">
